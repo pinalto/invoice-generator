@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.com/deer-inc/invoice-generator.svg?branch=master)](https://travis-ci.com/deer-inc/invoice-generator)
-[![Coverage Status](https://coveralls.io/repos/github/deer-inc/invoice-generator/badge.svg?branch=master)](https://coveralls.io/github/deer-inc/invoice-generator?branch=master)
-![MIT License](https://img.shields.io/github/license/deer-inc/invoice-generator.svg)
+[![Build Status](https://travis-ci.com/pinalto/invoice-generator.svg?branch=master)](https://travis-ci.com/pinalto/invoice-generator)
+[![Coverage Status](https://coveralls.io/repos/github/pinalto/invoice-generator/badge.svg?branch=master)](https://coveralls.io/github/pinalto/invoice-generator?branch=master)
+![MIT License](https://img.shields.io/github/license/pinalto/invoice-generator.svg)
 
 
 # Invoice
@@ -8,7 +8,7 @@
 請求書ジェネレーターです。URLパラメーターをつけると入力状態で開くことができます。
 
 ```
-https://deer-inc.github.io/invoice-generator/?title=品目&count=数量&unitType=人日&unitCost=単価
+https://pinalto.github.io/invoice-generator/?title=品目&count=数量&unitType=人日&unitCost=単価
 ```
 
 - 情報はローカルストレージに保存されます。画面右上よりキャッシュクリアが可能です
