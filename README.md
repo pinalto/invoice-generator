@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/pinalto/invoice-generator.svg?branch=master)](https://travis-ci.com/pinalto/invoice-generator)
+[![Build Status](https://travis-ci.org/pinalto/invoice-generator.svg?branch=master)](https://travis-ci.org/pinalto/invoice-generator)
 [![Coverage Status](https://coveralls.io/repos/github/pinalto/invoice-generator/badge.svg?branch=master)](https://coveralls.io/github/pinalto/invoice-generator?branch=master)
 ![MIT License](https://img.shields.io/github/license/pinalto/invoice-generator.svg)
 
