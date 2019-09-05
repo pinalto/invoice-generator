@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { take, filter, skip } from 'rxjs/operators';
+import { take, skip } from 'rxjs/operators';
 import { Invoice, InvoiceService } from '../invoice.service';
 import {
   FormBuilder,
@@ -7,11 +7,7 @@ import {
   Validators,
   FormArray
 } from '@angular/forms';
-import {
-  MAT_DATE_LOCALE,
-  DateAdapter,
-  MAT_DATE_FORMATS
-} from '@angular/material';
+import { MAT_DATE_LOCALE, DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
 import {
   MomentDateAdapter,
   MAT_MOMENT_DATE_FORMATS
@@ -90,7 +86,12 @@ export class FormComponent implements OnInit {
     });
 
     if (localStorage.getItem('lastData')) {
-      this.form.patchValue(JSON.parse(localStorage.getItem('lastData')));
+      this.form.patchValue(
+        {
+          ...JSON.parse(localStorage.getItem('lastData')),
+          id: Date.now()
+        }
+      );
     }
 
     this.form.valueChanges.subscribe((value: Invoice) => {
@@ -100,7 +101,6 @@ export class FormComponent implements OnInit {
       delete data.menues;
       delete data.client;
       localStorage.setItem('lastData', JSON.stringify(data));
-      this.invoiceService.updateValidStatus(this.form.valid);
       this.setQueryParams();
     });
   }
@@ -136,7 +136,7 @@ export class FormComponent implements OnInit {
     }
 
     if (Object.keys(query).length > 0) {
-      this.router.navigate([],
+      this.router.navigate(['./'],
         {
           relativeTo: this.route,
           queryParams: query,
